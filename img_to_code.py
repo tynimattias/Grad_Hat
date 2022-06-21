@@ -2,56 +2,32 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 
-def photo2pixelart(image, i_size, o_size):
-    """
-    image: path to image file
-    i_size: size of the small image eg:(8,8)
-    o_size: output size eg:(10000,10000)
-    """
-    #read file
-    img=Image.open(image)
-
-    #convert to small image
-    small_img=img.resize(i_size,Image.BILINEAR)
-
-    #resize to output size
-    res=small_img.resize(img.size, Image.NEAREST)
-
-    #Save output image
-    filename=f'mario_{i_size[0]}x{i_size[1]}.png'
-    res.save(filename)
-
-    #Display images side by side
-    plt.figure(figsize=(16,10))
-    #original image
-    plt.subplot(1,2,1)
-    plt.title('Original image', size=18)
-    plt.imshow(img)   #display image
-    plt.axis('off')   #hide axis
-    #pixel art
-    plt.subplot(1,2,2)
-    plt.title(f'Pixel Art {i_size[0]}x{i_size[1]}', size=18)
-    plt.imshow(res)
-    plt.axis('off')
-    plt.show()
 
 wizard = 'Hat/Music_note_2.png'
 
+#Open image and store to im
 im = Image.open(wizard)
+#Resize image for 32x32 image
 im = im.resize((32,32))
-print(im)
+
+#Show image to make sure it looks somewhat okay
 plt.imshow(im)
 plt.show()
+
+#Convert image data to RGB data for each pixel
 im = im.convert("RGB")
 pix_value = list(im.getdata())
-print(pix_value)
+
 
 pixel_rows = np.zeros((32,32,3))
 
 count = 0
 
+#Open a text file that we're going to write all of the C code to so you can copy paste to the Arduino program
 file_object = open("Hat/Music_note_2.txt", "w")
 
+#These loops create C code in the form: matrix.drawPixel(x, y, color); where color is matrix.Color888(R, G, B)
+#For each pixel, there is an RGB component associated with it so we have to write one line of code for each pixel.
 for i in range(32):
     for j in range(32):
         for k in range(3):
@@ -61,4 +37,4 @@ for i in range(32):
         count+=1
 
 file_object.close()
-#print(pixel_rows)
+

@@ -25,7 +25,7 @@ There are also a number of drawing functions with the Adafruit GFX library, but 
 
 I just entirly used drawPixel. This meant that I had to write one line of code for each individual pixel. With a 32x32 matrix, this could be up to 1024 lines of code for each image.
 
-So I created a Python script to automate to process image data and write the Arduino code for me for each image. 
+So I created a Python script to  process image data and write the Arduino code for me for each image. 
 [img_to_code.py](https://github.com/tynimattias/Grad_Hat/blob/main/img_to_code.py)
 When prompted for a directory, you just input the directory of the image that you want to turn into Arduino Code. The output will be a text file which will contain the code to output the image onto the LED matrix. 
 

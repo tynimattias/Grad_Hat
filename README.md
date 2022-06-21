@@ -46,3 +46,6 @@ Next, I placed the black cloth back over the led matrix and hot glued the cloth 
 ![IMG_1790](https://user-images.githubusercontent.com/72426180/174871050-f041e3fa-410e-4e5e-ac14-a3336185264c.jpg)
 ![IMG_1789](https://user-images.githubusercontent.com/72426180/174871075-a62dbe8d-1580-4108-8e48-304804f8a4a9.jpg)
 ![IMG_1792](https://user-images.githubusercontent.com/72426180/174871084-67f9e57d-4923-4d13-9ee7-d3465dfad496.jpg)
+![IMG_3836](https://user-images.githubusercontent.com/72426180/174881830-031dc7d8-87e2-4cb8-8fbd-b307e238ddab.jpg)
+
+

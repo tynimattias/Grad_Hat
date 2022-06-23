@@ -2,6 +2,12 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 
+
+#Opens an image with a given directory
+#Resizes that image
+#Opens a text file
+#Writes C++ code for Arduino into that text file
+
 image = str(input("Image path: "))
 
 im = Image.open(image)
